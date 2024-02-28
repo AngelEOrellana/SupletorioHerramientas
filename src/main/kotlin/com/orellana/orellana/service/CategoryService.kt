@@ -2,6 +2,7 @@ package com.orellana.orellana.service
 
 import com.orellana.orellana.model.Category
 import com.orellana.orellana.repository.CategoryRepository
+
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
@@ -16,7 +17,7 @@ class CategoryService {
         return categoryRepository.findAll()
     }
 
-    fun save(client: Category): Category {
+    fun save(category: Category): Category {
         try{
             return categoryRepository.save(category)
         }

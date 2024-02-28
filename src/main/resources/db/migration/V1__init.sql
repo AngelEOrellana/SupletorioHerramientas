@@ -8,8 +8,8 @@ CREATE TABLE IF NOT EXISTS category(
 CREATE TABLE IF NOT EXISTS expense(
     id SERIAL,
     description VARCHAR(50),
-    value DECIMAL(10,2),
-    catogory_id INT,
+    spend DECIMAL(10,2),
+    category_id INT,
     PRIMARY KEY(id),
-    FOREIGN KEY(catogory_id) REFERENCES category(id)
+    FOREIGN KEY(category_id) REFERENCES category(id)
 );
